@@ -8,8 +8,7 @@ def set_key():
 
 def encrypt(strg):
     global key
-    printable = set(string.printable)
-    strg = filter(lambda x: x in printable, strg)
+    strg = filter(lambda x: x in (set(string.printable)), strg)
     g,l = cycle(iter(key)),[]
     for i in strg:
         val = next(g)
